@@ -139,9 +139,9 @@ export default function Invitation() {
             height="450"
             frameBorder="1"
             style={{ border: 0 }}
-            allowFullScreen="x"
+            allowFullScreen={true}
             aria-hidden="false"
-            tabindex="0"
+            tabIndex={0}
           ></iframe>
         </div>
       </section>
