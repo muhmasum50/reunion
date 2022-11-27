@@ -5,7 +5,7 @@ export const HomeAnnounce:React.FC = () => {
   return(
     <section className="py-10">
       <div className="p-4 bg-sky-300 text-center rounded-md space-y-3">
-        <p className="text-base text-xl leading-6 font-semibold">
+        <p className="text-xl leading-6 font-semibold">
           Reuni 2023 akan disenggelarakan lho, Klik tombol dibawah ini ya .. ❤️
         </p>
         <Link className="flex flex-row px-4 py-2 text-base rounded-full items-center justify-center border border-transparent 

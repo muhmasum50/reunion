@@ -146,10 +146,39 @@ export default function Invitation() {
         </div>
       </section>
 
+      {/* payment */}
+      <section className="overflow-hidden space-y-4 px-6 pt-10  ">
+        <div className="text-center">
+          <p className="px-6 text-xl font-semibold text-center text-slate-800"> Biaya Iuran : </p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 lg:gap-4 sm:gap-1 sm:grid-cols-1 sm:py-1">
+              
+          <a href="#" className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                Pembayaran Online
+              </h5>
+              <p className="font-normal text-gray-700 dark:text-gray-400">
+                BCA - 6720725639  <span className="font-semibold text-primary">Sylviera Rastra Laylia.</span>
+              </p>
+          </a>
+
+          <a href="#" className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                Pembayaran Offline
+              </h5>
+              <p className="font-normal text-gray-700 dark:text-gray-400">
+                Bisa menghubungi, <span className="font-semibold text-primary">Ilham Owes.</span>
+              </p>
+          </a>
+
+        </div>
+      </section>
+
       {/*  run down */}
       <section className="overflow-hidden px-6 pt-10">
         <div className="text-center">
-          <p className="px-6 text-2xl text-center text-slate-800 py-10"> Rundown Kegiatan Acara : </p>
+          <p className="px-6 text-2xl font-semibold text-center text-slate-800 py-10"> Rundown Kegiatan Acara : </p>
         </div>
         <ol className="relative border-l border-blue-200 dark:border-gray-700">      
 
@@ -170,8 +199,8 @@ export default function Invitation() {
 
       </section>
 
-      <div style={{ display: "none" }}>
-        {/* <ReactPlayer playing url='https://soundcloud.com/hariezg-1/kepompong-sindentosca' /> */}
+      <div style={{ display: "block" }} className="flex">
+        {/* <ReactPlayer playing url='https://soundcloud.com/hariezg-1/kepompong-sindentosca' width={200} height={110} /> */}
       </div>
 
       <div className="py-10"></div>
