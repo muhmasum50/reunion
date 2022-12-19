@@ -19,7 +19,7 @@ const Invitation = ({children}:TemplateProps) => {
           </div>
         </section>
 
-        <NavBot/>
+        {/* <NavBot/> */}
       </div>
     </React.Fragment>
   )  

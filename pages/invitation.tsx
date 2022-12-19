@@ -13,20 +13,22 @@ import AOS from 'aos'
 import 'aos/dist/aos.css';
 
 const rundownEvent = [
-  {title: 'Kedatangan Peserta Reuni', desc: 'Peserta sementara diarahkan menuju ruang tengah'},
-  {title: 'Pembagian Kamar & ISHOMA', desc: 'Peserta istirahat dan melaksanakan istirahat, sholat dan makan'},
-  {title: 'Pembukaan & Sambutan', desc: 'Sambutan ketua pelaksana dan penjelasan tujuan,strukutur kepanitaan serta anggaran dana, dilanjutkan sambutan guru (bila ada)'},
-  {title: 'Sharing Session', desc: 'Kesan dan pesan untuk acara ini, kritik dan saran'},
-  {title: 'Having Fun', desc: 'Perform dari panita atau peserta, BBQ, tukar kado seluruh peserta dan harga max 10k'},
-  {title: 'Free Time', desc: 'Pembagian kelompok untuk outbond'},
-  {title: 'Sholat Shubuh', desc: 'sholat shubuh berjamaah, atau masing-masing'},
-  {title: 'Coffe Break', desc: 'Santai santai dulu, sembari menghirup udara segar'},
-  {title: 'Senam Pagi', desc: 'Peserta dan panitia melakukan senam pagi'},
-  {title: 'Makan pagi', desc: '-'},
-  {title: 'Outbond', desc: 'Estafet kardus, estafet air, voly air (khusus cowo), gobak sodor (khusus cewe). Peserta dibagi menjadi beberapa kelompok dan tiap kelompok mengumpulkan poin'},
-  {title: 'Free Time', desc: '-'},
-  {title: 'Penutupan', desc: 'Ditutup oleh ketupel'},
-  {title: 'ISHOMA dan persiapan pulang ', desc: '-'}
+  {time: 'Sabtu 14 Jan 2023, 07.00 - 15.00', title: 'Check-In Panitia', desc: 'Persiapan Acara'},
+  {time: 'Sabtu 14 Jan 2023, 15.00 - 17.00', title: 'Kedatangan Peserta Reuni', desc: 'Pembagian Kamar'},
+  {time: 'Sabtu 14 Jan 2023, 17.00 - 18.30', title: 'Istirahat, Sholat, dan Makan', desc: '-'},
+  {time: 'Sabtu 14 Jan 2023, 18.30 - 19.00', title: 'Pembukaan dan Sambutan', desc: 'Sambutan Ketua Pelaksana dan Guru'},
+  {time: 'Sabtu 14 Jan 2023, 19.00 - 20.00', title: 'Sharing Session', desc: 'Kesan pesan acara, kritik dan saran'},
+  {time: 'Sabtu 14 Jan 2023, 20.00 - 21.30', title: 'Have Fun', desc: 'Perform, BBQ, Tukar Kado, Pembagian Kelompok'},
+  {time: 'Sabtu 14 Jan 2023, 21.30 - Selesai', title: 'Jam Bebas', desc: '-'},
+
+  {time:'Minggu 15 Jan 2023, 04.00 - 05.00', title: 'Sholat Subuh', desc: '-'},
+  {time:'Minggu 15 Jan 2023, 05.00 - 06.00', title: 'Coffee Break', desc: '-'},
+  {time:'Minggu 15 Jan 2023, 06.00 - 06.30', title: 'Senam Pagi', desc: '-'},
+  {time:'Minggu 15 Jan 2023, 06.30 - 07.00', title: 'Makan Pagi', desc: '-'},
+  {time:'Minggu 15 Jan 2023, 07.00 - 09.00', title: 'Outbond', desc: 'Estafet Kardus, Estafet Air, Voli Air, Gobak Sodor'},
+  {time:'Minggu 15 Jan 2023, 09.00 - 10.30', title: 'Jam Bebas', desc: '-'},
+  {time:'Minggu 15 Jan 2023, 10.30 - 12.00', title: 'Penutupan', desc: 'Ditutup oleh Ketua Pelaksana'},
+  {time:'Minggu 15 Jan 2023, 12.00 - 14.00', title: 'Istirahat, Sholat, Makan dan Persiapan Pulang', desc: '-'},
 ]
 
 export default function Invitation() {
@@ -87,7 +89,7 @@ export default function Invitation() {
             <CalendarOutlined style={{fontSize:24}} className="text-blue-600"/>
             <div className="ml-4">
               <p className="text-base font-medium text-gray-900">Hari & Tanggal</p>
-              <p className="mt-1 text-sm text-gray-500">Sabtu - Minggu,  14 s/d 15 Januari 2023.</p>
+              <p className="mt-1 text-sm text-gray-500">Sabtu - Minggu,  14 s/d 15 Jan 2023.</p>
             </div>
           </a>
 
@@ -168,7 +170,7 @@ export default function Invitation() {
                 Pembayaran Offline
               </h5>
               <p className="font-normal text-gray-700 dark:text-gray-400">
-                Bisa menghubungi, <span className="font-semibold text-primary">Ilham Owes.</span>
+                Bisa menghubungi, <span className="font-semibold text-primary">Ilham Owes (0857-5551-1991).</span>
               </p>
           </a>
 
@@ -187,7 +189,7 @@ export default function Invitation() {
               return(
                 <li className="mb-10 ml-4" key={idx}>
                   <div className="absolute w-3 h-3 bg-blue-400 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                  {/* <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">#</time> */}
+                  {/* <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">{row.time}</time> */}
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{row.title}</h3>
                   <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">{row.desc}</p>
                 </li>
@@ -198,10 +200,6 @@ export default function Invitation() {
         </ol>
 
       </section>
-
-      <div style={{ display: "block" }} className="flex">
-        {/* <ReactPlayer playing url='https://soundcloud.com/hariezg-1/kepompong-sindentosca' width={200} height={110} /> */}
-      </div>
 
       <div className="py-10"></div>
       
